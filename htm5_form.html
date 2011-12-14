@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>htm5 form</title>
+	<meta name="description" content="HTML5 Forms Demo" />
+	<meta name="author" content="Zohar Arad" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+	<link href='http://fonts.googleapis.com/css?family=Mako|Rationale|Balthazar' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" href="css/form.css" />
+</head>
+<body>
+  <h1>Playing with HTML5 Forms</h1>
+	<form action="/save" method="post" id="form_demo">
+	  <fieldset>
+	    <legend>Personal Details</legend>
+	    <p class="form_row">
+	      <label for="first_name">First Name</label>
+	      <input type="text" name="first_name" id="first_name" placeholder="First Name" required pattern="\w+" title="A string of at least one character" />
+	    </p>
+	    <p class="form_row">
+        <label for="last_name">Last Name</label>
+        <input type="text" name="last_name" id="last_name" placeholder="Last Name" required pattern="\w+" title="A string of at least one character" />
+      </p>
+      <p class="form_row">
+        <label for="dob">Date of birth</label>
+        <input type="date" name="dob" id="dob" placeholder="YYYY-MM-DD" required title="Date formatted YYYY-MM-DD" />
+      </p>
+      <p class="form_row">
+        <label for="height">Height</label>
+        <input type="number" name="height" id="height" placeholder="Height" />
+      </p>
+	  </fieldset>
+	  <fieldset>
+	    <legend>Contact Details</legend>
+      <p class="form_row">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="you@youremail.com" required title="A valid email address" />
+      </p>
+      <p class="form_row">
+        <label for="tel">Telephone</label>
+        <input type="tel" name="tel" id="tel" placeholder="Your phone number" required title="A 9 digit phone number" />
+      </p>
+      <p class="form_row">
+        <label for="website">Website</label>
+        <input type="url" name="website" id="website" placeholder="http://" required title="A valid URL" />
+      </p>
+	  </fieldset>
+	  <fieldset>
+	    <legend>More about yourself</legend>
+	    <p class="form_row">
+        <label for="area">Living area</label>
+        <input type="text" name="area" id="area" placeholder="Your living area" list="areas_list" />
+        <datalist id="areas_list">
+          <option value="north" />
+          <option value="center" />
+          <option value="south" />
+        </datalist>
+      </p>
+      <p class="form_row">
+        <label for="color">Favorite Color</label>
+        <input type="color" name="color" id="color" placeholder="#FF44EE" />
+      </p>
+	  </fieldset>
+	  <p class="form_actions">
+	    <input type="submit" name="send" value="Save Details" />
+	    <input type="reset" name="clear" value="Clear Form" />
+	  </p>
+	</form>
+</body>
+</html>
